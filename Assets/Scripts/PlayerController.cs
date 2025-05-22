@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public float fireRate = 0.5f; // Time in seconds between shots
+    private float nextFireTime = 0f;
     public int maxHealth = 3;
     private int currentHealth;
 
@@ -28,9 +30,10 @@ public class PlayerController : MonoBehaviour
 
         ClampToScreen();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && Time.time >= nextFireTime)
         {
             Shoot();
+            nextFireTime = Time.time + fireRate; // Set the next fire time
         }
     }
 
