@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -7,6 +8,11 @@ public class ScoreManager : MonoBehaviour
     public int score = 0;
     public TMP_Text scoreText;
 
+    public int targetScore = 500; // <-- Set win score here
+    public string nextSceneName = "Level2"; // <-- Name of next scene to load
+
+    public GameObject winMessageUI; // Assign in Inspector
+    public float delayBeforeLoad = 2f;
     void Awake()
     {
         if (instance == null)
@@ -19,5 +25,23 @@ public class ScoreManager : MonoBehaviour
     {
         score += amount;
         scoreText.text = "Score: " + score;
+
+        if (score >= targetScore)
+        {
+            WinGame();
+        }
+    }
+
+    void WinGame()
+    {
+        if (winMessageUI != null)
+            winMessageUI.SetActive(true); // Show the message
+
+        Invoke("LoadNextLevel", delayBeforeLoad); // Delay before loading
+    }
+
+    void LoadNextLevel()
+    {
+        SceneManager.LoadScene(nextSceneName);
     }
 }
