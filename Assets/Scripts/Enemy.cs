@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    AudioManagerLvl1 audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerLvl1>();
+    }
+
     public float speed = 2f;
     public int scoreValue = 1;
 
@@ -22,6 +28,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.CompareTag("Bullet"))
         {
+            audioManager.PlaySFX(audioManager.hit); // Play crash sound
             Destroy(other.gameObject);
             TakeDamage(1);
         }

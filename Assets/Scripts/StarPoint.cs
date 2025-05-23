@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class StarPoint : MonoBehaviour
 {
+    AudioManagerLvl1 audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerLvl1>();
+    }
+
     public float fallSpeed = 2f;
     public int scoreValue = 5;
 
@@ -15,6 +21,7 @@ public class StarPoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            audioManager.PlaySFX(audioManager.powerUp); // Play power-up sound
             ScoreManager.instance.AddScore(scoreValue);
             Destroy(gameObject);
         }
