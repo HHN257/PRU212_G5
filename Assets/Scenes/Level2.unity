@@ -669,7 +669,7 @@ MonoBehaviour:
   scoreText: {fileID: 1061980335}
   targetScore: 500
   nextSceneName: Level3
-  winMessageUI: {fileID: 0}
+  winMessageUI: {fileID: 753713937}
   delayBeforeLoad: 2
 --- !u!4 &964703497
 Transform:
