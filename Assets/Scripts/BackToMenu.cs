@@ -5,6 +5,12 @@ using System.Collections;
 
 public class BackToMenu : MonoBehaviour
 {
+    AudioManagerGameOver audioManagerGameOver;
+    private void Awake()
+    {
+        audioManagerGameOver = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerGameOver>();
+    }
+
     public Button menuButton;
     public float delayBeforeStart = 1.5f;
     public float blinkSpeed = 0.2f;
@@ -12,6 +18,7 @@ public class BackToMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        audioManagerGameOver.PlaySFX(audioManagerGameOver.buttonClickSFX); // Play button click sound
         menuButton.interactable = false; // prevent double clicks
         StartCoroutine(BlinkAndLoad());
     }
