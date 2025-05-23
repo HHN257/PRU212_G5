@@ -1074,7 +1074,7 @@ MonoBehaviour:
   musicSource: {fileID: 1764295447}
   SFXSource: {fileID: 1427523686}
   gameOverMusic: {fileID: 8300000, guid: 1555d0f33d1b60145ac0e27ea21aeb07, type: 3}
-  buttonClickSFX: {fileID: 8300000, guid: a7eb395399139cb4896e0f25b7664d24, type: 3}
+  buttonClickSFX: {fileID: 8300000, guid: f0824fd1fc1fcb344a006d2e142bc2c4, type: 3}
 --- !u!4 &1495392740
 Transform:
   m_ObjectHideFlags: 0

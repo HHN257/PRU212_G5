@@ -639,7 +639,7 @@ MonoBehaviour:
   musicSource: {fileID: 860327474}
   SFXSource: {fileID: 458620736}
   startGameMusic: {fileID: 8300000, guid: 559c232a43caebe41870ce54786f604e, type: 3}
-  buttonClickSFX: {fileID: 8300000, guid: a7eb395399139cb4896e0f25b7664d24, type: 3}
+  buttonClickSFX: {fileID: 8300000, guid: f0824fd1fc1fcb344a006d2e142bc2c4, type: 3}
 --- !u!4 &494180452
 Transform:
   m_ObjectHideFlags: 0

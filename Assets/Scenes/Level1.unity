@@ -1738,10 +1738,10 @@ MonoBehaviour:
   SFXSource: {fileID: 1389368685}
   lvl1Music: {fileID: 8300000, guid: 033766cc31c97904bae4404b8a079544, type: 3}
   shoot: {fileID: 8300000, guid: 2c765613d749386429fdc7a18f52f8f5, type: 3}
-  crash: {fileID: 8300000, guid: 9f383df95e5acbe4187bb0903f5947d4, type: 3}
+  crash: {fileID: 8300000, guid: 9335cb670f1ed9942a9a22d7a94ec3ab, type: 3}
   hit: {fileID: 8300000, guid: e339ef2453eb517488453b8654953997, type: 3}
-  powerUp: {fileID: 8300000, guid: c657bd446d5960f429781a033abd2419, type: 3}
-  gameOver: {fileID: 8300000, guid: 1555d0f33d1b60145ac0e27ea21aeb07, type: 3}
+  powerUp: {fileID: 8300000, guid: 0aac212572b1e47438237f1efa7e8013, type: 3}
+  gameOver: {fileID: 8300000, guid: 2b445dd61988051459629d1c4dc16768, type: 3}
 --- !u!1 &2042569871
 GameObject:
   m_ObjectHideFlags: 0
