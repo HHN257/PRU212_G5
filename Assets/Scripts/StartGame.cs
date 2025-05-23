@@ -5,6 +5,12 @@ using System.Collections;
 
 public class StartGame : MonoBehaviour
 {
+    AudioManagerStartGame audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerStartGame>();
+    }
+
     public Button startButton;
     public float delayBeforeStart = 1.5f;
     public float blinkSpeed = 0.2f;
@@ -12,6 +18,7 @@ public class StartGame : MonoBehaviour
 
     public void BeginGame()
     {
+        audioManager.PlaySFX(audioManager.buttonClickSFX); // Play button click sound
         startButton.interactable = false; // prevent double clicks
         StartCoroutine(BlinkAndLoad());
     }
@@ -33,3 +40,4 @@ public class StartGame : MonoBehaviour
         SceneManager.LoadScene("Level1");
     }
 }
+

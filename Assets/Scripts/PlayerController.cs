@@ -4,6 +4,12 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    AudioManagerLvl1 audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerLvl1>();
+    }
+
     public float moveSpeed = 5f;
     public GameObject bulletPrefab;
     public Transform firePoint;
@@ -39,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
+        audioManager.PlaySFX(audioManager.shoot); // Play shooting sound
         Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
     }
 
@@ -54,10 +61,12 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Enemy") && !isInvincible)
         {
+            audioManager.PlaySFX(audioManager.crash); // Play hit sound
             TakeDamage(1);
         }
         else if (other.CompareTag("AtkSpdBuff"))
         {
+            audioManager.PlaySFX(audioManager.powerUp); // Play power-up sound
             IncreaseFireRate(0.1f, 3f); // Boost fire rate for 5 seconds
             Destroy(other.gameObject); // Remove the power-up
         }
@@ -94,6 +103,7 @@ public class PlayerController : MonoBehaviour
 
     void GameOver()
     {
+        audioManager.PlaySFX(audioManager.gameOver); // Play game over sound
         Debug.Log("Game Over!");
         SceneManager.LoadScene("GameOver");
         PlayerPrefs.SetInt("FinalScore", ScoreManager.instance.score);
@@ -103,6 +113,7 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseFireRate(float amount, float duration)
     {
+        audioManager.PlaySFX(audioManager.powerUp); // Play power-up sound
         StopAllCoroutines(); // Stop existing boosts to avoid stacking
         StartCoroutine(FireRateBoost(amount, duration));
     }
