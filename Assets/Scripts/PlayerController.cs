@@ -56,6 +56,11 @@ public class PlayerController : MonoBehaviour
         {
             TakeDamage(1);
         }
+        else if (other.CompareTag("AtkSpdBuff"))
+        {
+            IncreaseFireRate(0.1f, 3f); // Boost fire rate for 5 seconds
+            Destroy(other.gameObject); // Remove the power-up
+        }
     }
 
     void TakeDamage(int damage)
@@ -90,6 +95,26 @@ public class PlayerController : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game Over!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOver");
+        PlayerPrefs.SetInt("FinalScore", ScoreManager.instance.score);
+        SceneManager.LoadScene("GameOver");
+
     }
+
+    public void IncreaseFireRate(float amount, float duration)
+    {
+        StopAllCoroutines(); // Stop existing boosts to avoid stacking
+        StartCoroutine(FireRateBoost(amount, duration));
+    }
+
+    IEnumerator FireRateBoost(float amount, float duration)
+    {
+        float originalFireRate = fireRate;
+        fireRate = Mathf.Max(0.1f, fireRate - amount); // Prevent too-fast fire rate
+
+        yield return new WaitForSeconds(duration);
+
+        fireRate = originalFireRate; // Restore original fire rate
+    }
+
 }

@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   scoreText: {fileID: 923492147}
-  targetScore: 500
+  targetScore: 300
   nextSceneName: Level2
   winMessageUI: {fileID: 1888729646}
   delayBeforeLoad: 2
@@ -191,7 +191,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3918717606763712655, guid: cfb39fdd135d12e41a8dcb324e660e53, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.079
+      value: -3.387
       objectReference: {fileID: 0}
     - target: {fileID: 3918717606763712655, guid: cfb39fdd135d12e41a8dcb324e660e53, type: 3}
       propertyPath: m_LocalPosition.z
@@ -256,7 +256,7 @@ MonoBehaviour:
   moveSpeed: 5
   bulletPrefab: {fileID: 4596656645416384833, guid: b362598f94f38de4aa286fddbd7fbad3, type: 3}
   firePoint: {fileID: 272779291}
-  fireRate: 0.5
+  fireRate: 0.3
   maxHealth: 3
 --- !u!4 &257900356 stripped
 Transform:
@@ -919,10 +919,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 653176775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 220, y: -1300}
-  m_SizeDelta: {x: 141.3984, y: 44.9874}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 314.44653, y: 84}
+  m_SizeDelta: {x: 195.6207, y: 44.9874}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &923492147
 MonoBehaviour:
@@ -1125,6 +1125,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1156064861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1156064863}
+  - component: {fileID: 1156064862}
+  m_Layer: 0
+  m_Name: BuffSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1156064862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156064861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6f42dc530ccf149a3979254ee3b1ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3810804319762867381, guid: 03e8c78bb85d143478877656bcb66de3, type: 3}
+  spawnRate: 6
+--- !u!4 &1156064863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156064861}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.27, y: 53.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281134085
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,15 +1319,15 @@ RectTransform:
   m_GameObject: {fileID: 1888729646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9546, y: 1.9546, z: 1.9546}
+  m_LocalScale: {x: 4.373222, y: 4.373222, z: 4.373222}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 653176775}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 47, y: 116}
+  m_SizeDelta: {x: 435.1664, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888729648
 MonoBehaviour:
@@ -1303,7 +1349,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You Win !
+  m_text: '            You Win !
+
+    Moving to the next level !'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1476,3 +1524,4 @@ SceneRoots:
   - {fileID: 712376035}
   - {fileID: 1075512401}
   - {fileID: 865328963}
+  - {fileID: 1156064863}

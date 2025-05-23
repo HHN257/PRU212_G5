@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7ce96b8e41234334781de13f756693de
+guid: eb15e397f6ebf8c448a0738b1ecd05e8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3291170886151756278
-    second: space_sprite 1_0
+      213: 2149918337973384519
+    second: cDpnzW_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: space_sprite 1_0
+      name: cDpnzW_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1333
-        height: 750
+        width: 1617
+        height: 848
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a0621d334896352d0800000000000000
-      internalID: -3291170886151756278
+      spriteID: 745700f665b06dd10800000000000000
+      internalID: 2149918337973384519
       vertices: []
       indices: 
       edges: []
