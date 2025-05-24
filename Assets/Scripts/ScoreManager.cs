@@ -24,6 +24,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         score += amount;
+        score = Mathf.Max(0, score); // Prevent negative score
         scoreText.text = "Score: " + score;
 
         if (score >= targetScore)

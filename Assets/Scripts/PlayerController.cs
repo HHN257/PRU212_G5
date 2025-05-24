@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerLvl1>();
     }
 
+    public GameObject[] hearts; // Assign HP, HP (1), HP (2) in Inspector
     public float moveSpeed = 5f;
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    private Coroutine fireRateCoroutine;
     public float fireRate = 0.5f; // Time in seconds between shots
     private float nextFireTime = 0f;
     public int maxHealth = 3;
@@ -63,6 +65,7 @@ public class PlayerController : MonoBehaviour
         {
             audioManager.PlaySFX(audioManager.crash); // Play hit sound
             TakeDamage(1);
+            ScoreManager.instance.AddScore(-30); // Deduct score on hit
         }
         else if (other.CompareTag("AtkSpdBuff"))
         {
@@ -76,6 +79,12 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth -= damage;
 
+        // Hide the corresponding heart
+        if (currentHealth >= 0 && currentHealth < hearts.Length)
+        {
+            hearts[currentHealth].SetActive(false);
+        }
+
         if (currentHealth <= 0)
         {
             GameOver();
@@ -85,6 +94,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(BlinkSprite());
         }
     }
+
 
     IEnumerator BlinkSprite()
     {
@@ -113,10 +123,15 @@ public class PlayerController : MonoBehaviour
 
     public void IncreaseFireRate(float amount, float duration)
     {
-        audioManager.PlaySFX(audioManager.powerUp); // Play power-up sound
-        StopAllCoroutines(); // Stop existing boosts to avoid stacking
-        StartCoroutine(FireRateBoost(amount, duration));
+        audioManager.PlaySFX(audioManager.powerUp);
+
+        // Only stop the fire rate boost coroutine
+        if (fireRateCoroutine != null)
+            StopCoroutine(fireRateCoroutine);
+
+        fireRateCoroutine = StartCoroutine(FireRateBoost(amount, duration));
     }
+
 
     IEnumerator FireRateBoost(float amount, float duration)
     {
