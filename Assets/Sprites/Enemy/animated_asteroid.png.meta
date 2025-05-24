@@ -1,0 +1,964 @@
+fileFormatVersion: 2
+guid: 4a7a09e8ee352dd45b1c6f10f8947c1f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 957276647220487502
+    second: animated_asteroid_0
+  - first:
+      213: 6513485286054451576
+    second: animated_asteroid_1
+  - first:
+      213: 1503152737647339074
+    second: animated_asteroid_2
+  - first:
+      213: -3589121727562111102
+    second: animated_asteroid_3
+  - first:
+      213: -353185667824443669
+    second: animated_asteroid_4
+  - first:
+      213: 1271241122427385428
+    second: animated_asteroid_5
+  - first:
+      213: -4188975835669402629
+    second: animated_asteroid_6
+  - first:
+      213: 3574130643358910904
+    second: animated_asteroid_7
+  - first:
+      213: 5817752244845565963
+    second: animated_asteroid_8
+  - first:
+      213: -7886150866330146354
+    second: animated_asteroid_9
+  - first:
+      213: -1299584054320346457
+    second: animated_asteroid_10
+  - first:
+      213: 6689975098561036135
+    second: animated_asteroid_11
+  - first:
+      213: -3129595018517808810
+    second: animated_asteroid_12
+  - first:
+      213: 5809965975097526530
+    second: animated_asteroid_13
+  - first:
+      213: 7133885106171539448
+    second: animated_asteroid_14
+  - first:
+      213: -6784533786815960206
+    second: animated_asteroid_15
+  - first:
+      213: -4809861816964943733
+    second: animated_asteroid_16
+  - first:
+      213: 6389212290008239388
+    second: animated_asteroid_17
+  - first:
+      213: -9080210187782583333
+    second: animated_asteroid_18
+  - first:
+      213: 7063614473185055964
+    second: animated_asteroid_19
+  - first:
+      213: 2865764877123909747
+    second: animated_asteroid_20
+  - first:
+      213: 3564566527620234699
+    second: animated_asteroid_21
+  - first:
+      213: 7200597172823572702
+    second: animated_asteroid_22
+  - first:
+      213: -1412793737216066548
+    second: animated_asteroid_23
+  - first:
+      213: -2746122762435431979
+    second: animated_asteroid_24
+  - first:
+      213: -8765648698790684124
+    second: animated_asteroid_25
+  - first:
+      213: -4376966149804720037
+    second: animated_asteroid_26
+  - first:
+      213: 8155716176847831062
+    second: animated_asteroid_27
+  - first:
+      213: -7604203182826251259
+    second: animated_asteroid_28
+  - first:
+      213: -723318966069479960
+    second: animated_asteroid_29
+  - first:
+      213: -6399906383566806065
+    second: animated_asteroid_30
+  - first:
+      213: -2897037542096189620
+    second: animated_asteroid_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animated_asteroid_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 77
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a52e03faf2d0949a2a57737b5335ed
+      internalID: 1061339002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 73
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79dd9a8939749294bb86c7ef2b70d116
+      internalID: 1417274037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 73
+        width: 66
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b503b7a8c4ed05146b080562e232306c
+      internalID: 610156451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_3
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 74
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da03510aa152b3e4c8f5b4699aaec43c
+      internalID: 482641878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 76
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf090a634583a9949ae0a5925d5dd586
+      internalID: -910129016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 79
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56af734699d96a5488bc75a35e61ef05
+      internalID: -582869771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_6
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 74
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9eed14794af0e498632548fbd89f46
+      internalID: 73470664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_7
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 74
+        width: 55
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be674c946b2eb7e4db430664e97e3e99
+      internalID: 193336646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_8
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 77
+        width: 56
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a176517b7c903444aaef3909cf51f9ae
+      internalID: 1181513987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_9
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 80
+        width: 59
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6efe83b3de719a94ea1194ff856154e5
+      internalID: 248990061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_10
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 83
+        width: 65
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cac533128ee3ad43bdb1b783acd7345
+      internalID: -174359863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_11
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 80
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923ffb2090e7aa24e8d6722669273ddd
+      internalID: 1816045932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_12
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 76
+        width: 55
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eafe6c2805d7b3246a3fa91b67fe6dc2
+      internalID: 1900027710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_13
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 70
+        width: 56
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa241c74f4c50946bacb1354861ea42
+      internalID: 830758161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_14
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 70
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35582a40432fd5c40ab3f8a3332e1cd0
+      internalID: -9063320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_15
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 71
+        width: 55
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59c27f8a3d524ba4a83270d22f1917d9
+      internalID: -1245835038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_16
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba347eec3fb14d46b7c9900fdfab16a
+      internalID: 1010073902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_17
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 2
+        width: 65
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5945fbaa511d3f041905d23866ee0107
+      internalID: -529716857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_18
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 2
+        width: 69
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d586c8e7dc5a8854686714b40402f9cb
+      internalID: -1485529286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_19
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 3
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04955b105a53077458d6af2b38a0faf3
+      internalID: 1600631255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_20
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 7
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce81c4347049d8429b2d803dbbbfd47
+      internalID: 35976859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_21
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 5
+        width: 57
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec32b7db0e84384cb876a522f291341
+      internalID: -645054290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_22
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 2
+        width: 55
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bd2402492687eb478d0763f6f6c3859
+      internalID: 1544118633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_23
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 3
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9eea3469af1b3488c7d574c1e43930
+      internalID: 103189540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_24
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 7
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e828f8e7514a84a95f7ccd6ee5ecc7
+      internalID: 1177834168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_25
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 10
+        width: 64
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c575e79664d8244a165d4f8d96853e
+      internalID: -1773231644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_26
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 11
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 775b294d9a962e4448441724fac86b38
+      internalID: 2091687049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_27
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 7
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f98899c1ae7fb7447aebdca50eb874b8
+      internalID: -1699441926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_28
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 2
+        width: 56
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b5ef2cbe92f504c963e61b5a7129e5
+      internalID: -530948166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_29
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 0
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b941b24b4622bb4d98f9d581c1b8258
+      internalID: -948890265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_30
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 0
+        width: 54
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fb527058af68840b31b9de33e09d8a
+      internalID: 279266500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animated_asteroid_31
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 3
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5145b9fb99976dd4db1f0654e350d6c3
+      internalID: -1059148945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4b2608e267d1ecd4c8eae014955700a6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      animated_asteroid_0: 1061339002
+      animated_asteroid_1: 1417274037
+      animated_asteroid_10: -174359863
+      animated_asteroid_11: 1816045932
+      animated_asteroid_12: 1900027710
+      animated_asteroid_13: 830758161
+      animated_asteroid_14: -9063320
+      animated_asteroid_15: -1245835038
+      animated_asteroid_16: 1010073902
+      animated_asteroid_17: -529716857
+      animated_asteroid_18: -1485529286
+      animated_asteroid_19: 1600631255
+      animated_asteroid_2: 610156451
+      animated_asteroid_20: 35976859
+      animated_asteroid_21: -645054290
+      animated_asteroid_22: 1544118633
+      animated_asteroid_23: 103189540
+      animated_asteroid_24: 1177834168
+      animated_asteroid_25: -1773231644
+      animated_asteroid_26: 2091687049
+      animated_asteroid_27: -1699441926
+      animated_asteroid_28: -530948166
+      animated_asteroid_29: -948890265
+      animated_asteroid_3: 482641878
+      animated_asteroid_30: 279266500
+      animated_asteroid_31: -1059148945
+      animated_asteroid_4: -910129016
+      animated_asteroid_5: -582869771
+      animated_asteroid_6: 73470664
+      animated_asteroid_7: 193336646
+      animated_asteroid_8: 1181513987
+      animated_asteroid_9: 248990061
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
