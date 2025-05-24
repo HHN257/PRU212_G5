@@ -3,6 +3,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject instructionPanel;
+    public GameObject historyPanel;
     public GameObject background; // Reference to your background GameObject
 
 
@@ -17,4 +18,6 @@ public class UIManager : MonoBehaviour
         instructionPanel.SetActive(false);
         background.SetActive(true); // Show background again
     }
+
+   
 }

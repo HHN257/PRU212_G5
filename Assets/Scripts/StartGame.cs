@@ -16,6 +16,11 @@ public class StartGame : MonoBehaviour
         StartCoroutine(BlinkAndLoad());
     }
 
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
     private IEnumerator BlinkAndLoad()
     {
         Image buttonImage = startButton.GetComponent<Image>();
