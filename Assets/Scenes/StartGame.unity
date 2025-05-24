@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instructionPanel: {fileID: 1091757825}
   background: {fileID: 233385247}
+  highScore: {fileID: 355578376}
 --- !u!114 &793366239
 MonoBehaviour:
   m_ObjectHideFlags: 0
