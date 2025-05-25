@@ -1,21 +1,22 @@
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class GameOverUI : MonoBehaviour
 {
-    public TMP_Text highScoreText;
+    //public TMP_Text highScoreText;
+    public HighScoreManagerOver highScoreManager;
 
     void Start()
     {
         int finalScore = PlayerPrefs.GetInt("FinalScore", 0);
-        int highScore = PlayerPrefs.GetInt("HighScore", 0);
+        string playerName = StartGame.playerName;
 
-        if (finalScore > highScore)
+        if (highScoreManager != null && !string.IsNullOrEmpty(playerName))
         {
-            highScore = finalScore;
-            PlayerPrefs.SetInt("HighScore", highScore);
+            highScoreManager.AddNewScore(playerName, finalScore);
+            highScoreManager.ShowLeaderboard(); // 💡 Refresh display
         }
 
-        highScoreText.text = "High Score: " + highScore;
+        //highScoreText.text = $"Score: {finalScore}";
     }
 }

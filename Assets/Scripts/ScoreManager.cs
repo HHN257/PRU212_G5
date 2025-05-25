@@ -35,11 +35,16 @@ public class ScoreManager : MonoBehaviour
 
     void WinGame()
     {
-        if (winMessageUI != null)
-            winMessageUI.SetActive(true); // Show the message
+        // Save score before scene change
+        PlayerPrefs.SetInt("FinalScore", score);
+        PlayerPrefs.Save();
 
-        Invoke("LoadNextLevel", delayBeforeLoad); // Delay before loading
+        if (winMessageUI != null)
+            winMessageUI.SetActive(true); // Show win message
+
+        Invoke("LoadNextLevel", delayBeforeLoad); // Wait before loading next scene
     }
+
 
     void LoadNextLevel()
     {
