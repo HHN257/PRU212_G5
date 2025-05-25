@@ -3,8 +3,9 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject instructionPanel;
+    public GameObject leaderboardPanel; // Reference to your leaderboard panel GameObject
     public GameObject background; // Reference to your background GameObject
-    public GameObject highScore; // Reference to your high score GameObject
+    public GameObject inputPlayerName; // Reference to your player name input field
 
     AudioManagerStartGame audioManager;
     private void Awake()
@@ -17,7 +18,7 @@ public class UIManager : MonoBehaviour
         audioManager.PlaySFX(audioManager.buttonClickSFX); // Play button click sound
         instructionPanel.SetActive(true);
         background.SetActive(false); // Hide background
-        highScore.SetActive(false);
+        inputPlayerName.SetActive(false); // Hide player name input field
     }
 
     public void HideInstructions()
@@ -25,6 +26,22 @@ public class UIManager : MonoBehaviour
         audioManager.PlaySFX(audioManager.buttonClickSFX); // Play button click sound
         instructionPanel.SetActive(false);
         background.SetActive(true); // Show background again
-        highScore.SetActive(true); // Show high score again
+        inputPlayerName.SetActive(true);
+    }
+
+    public void ShowLeaderboard()
+    {
+        audioManager.PlaySFX(audioManager.buttonClickSFX); // Play button click sound
+        leaderboardPanel.SetActive(true);
+        background.SetActive(false); // Hide background
+        inputPlayerName.SetActive(false); // Hide player name input field
+    }
+
+    public void HideLeaderboard()
+    {
+        audioManager.PlaySFX(audioManager.buttonClickSFX); // Play button click sound
+        leaderboardPanel.SetActive(false);
+        background.SetActive(true); // Show background again
+        inputPlayerName.SetActive(true);
     }
 }

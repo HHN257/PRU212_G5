@@ -1,25 +1,37 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro; // Required for TMP_InputField
 using System.Collections;
 
 public class StartGame : MonoBehaviour
 {
     AudioManagerStartGame audioManager;
+
+    [Header("UI References")]
+    public Button startButton;
+    public TMP_InputField playerNameInput; // ← Assign this in Inspector!
+
+    [Header("Blink Settings")]
+    public float delayBeforeStart = 1.5f;
+    public float blinkSpeed = 0.2f;
+    public int blinkCount = 4;
+
+    public static string playerName = "Player"; // Static for global use
+
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManagerStartGame>();
     }
 
-    public Button startButton;
-    public float delayBeforeStart = 1.5f;
-    public float blinkSpeed = 0.2f;
-    public int blinkCount = 4;
-
     public void BeginGame()
     {
         audioManager.PlaySFX(audioManager.buttonClickSFX); // Play button click sound
         startButton.interactable = false; // prevent double clicks
+
+        // Store the name globally
+        playerName = string.IsNullOrEmpty(playerNameInput.text) ? "Player" : playerNameInput.text;
+
         StartCoroutine(BlinkAndLoad());
     }
 
@@ -37,7 +49,7 @@ public class StartGame : MonoBehaviour
         }
 
         yield return new WaitForSeconds(delayBeforeStart);
+
         SceneManager.LoadScene("Level1");
     }
 }
-
