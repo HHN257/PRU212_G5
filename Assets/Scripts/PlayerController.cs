@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
@@ -23,11 +23,32 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
     private bool isInvincible = false;
+    public GameObject shield;
+    private bool hasShield = false;
+    private Vector3 startPosition;
+
+    [Header("Shield Settings")]
+    public float shieldDuration = 5f;
+    public Vector3 shieldOffset = Vector3.zero; // Offset position cho shield
+
+    [Header("Reset Settings")]
+    public bool resetPositionOnHit = false; // Option to reset position or not
+    public Vector3 customResetPosition = new Vector3(0, -3, 0); // Custom reset position
 
     void Start()
     {
+        // Lưu vị trí ban đầu của player
+        startPosition = transform.position;
+
+        if (shield != null)
+        {
+            shield.SetActive(false);
+        }
+
         currentHealth = maxHealth;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+       
     }
 
     void Update()
@@ -61,11 +82,14 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy") && !isInvincible)
+        if (other.CompareTag("Enemy") && !isInvincible && !hasShield)
         {
-            audioManager.PlaySFX(audioManager.crash); // Play hit sound
+            audioManager.PlaySFX(audioManager.crash); // Phát âm thanh va chạm
             TakeDamage(1);
-            ScoreManager.instance.AddScore(-30); // Deduct score on hit
+            ScoreManager.instance.AddScore(-30); // Trừ điểm khi va chạm
+
+            // Thay vì ResetPlayer(), chỉ activate shield và invincibility
+            StartCoroutine(InvincibilityCoroutine());
         }
         else if (other.CompareTag("AtkSpdBuff"))
         {
@@ -75,8 +99,54 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Chỉ sử dụng khi thực sự cần reset vị trí (ví dụ: rơi xuống hố)
+    public void ResetPlayerPosition()
+    {
+        // Sử dụng custom reset position thay vì startPosition
+        Vector3 resetPos = resetPositionOnHit ? customResetPosition : startPosition;
+
+        Debug.Log($"Resetting player to position: {resetPos}");
+        transform.position = resetPos;
+
+        // Reset physics nếu có
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+        }
+    }
+
+    private IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;
+        hasShield = true;
+
+        if (shield != null)
+        {
+            shield.SetActive(true);
+          
+        }
+
+        // Blink effect during invincibility
+        StartCoroutine(BlinkSprite());
+
+        yield return new WaitForSeconds(shieldDuration);
+
+        if (shield != null)
+        {
+            shield.SetActive(false);
+
+        }
+
+        isInvincible = false;
+        hasShield = false;
+    }
+
     void TakeDamage(int damage)
     {
+        if (isInvincible || hasShield) return; // Prevent damage if invincible or has shield
+
         currentHealth -= damage;
 
         // Hide the corresponding heart
@@ -89,36 +159,29 @@ public class PlayerController : MonoBehaviour
         {
             GameOver();
         }
-        else
-        {
-            StartCoroutine(BlinkSprite());
-        }
     }
-
 
     IEnumerator BlinkSprite()
     {
-        isInvincible = true;
-
-        for (int i = 0; i < 5; i++)
+        // Blink effect for visual feedback
+        for (int i = 0; i < 10; i++) // Increased blink count
         {
-            spriteRenderer.enabled = false;
-            yield return new WaitForSeconds(0.1f);
-            spriteRenderer.enabled = true;
-            yield return new WaitForSeconds(0.1f);
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.enabled = false;
+                yield return new WaitForSeconds(0.1f);
+                spriteRenderer.enabled = true;
+                yield return new WaitForSeconds(0.1f);
+            }
         }
-
-        isInvincible = false;
     }
 
     void GameOver()
     {
         audioManager.PlaySFX(audioManager.gameOver); // Play game over sound
         Debug.Log("Game Over!");
-        SceneManager.LoadScene("GameOver");
         PlayerPrefs.SetInt("FinalScore", ScoreManager.instance.score);
         SceneManager.LoadScene("GameOver");
-
     }
 
     public void IncreaseFireRate(float amount, float duration)
@@ -132,7 +195,6 @@ public class PlayerController : MonoBehaviour
         fireRateCoroutine = StartCoroutine(FireRateBoost(amount, duration));
     }
 
-
     IEnumerator FireRateBoost(float amount, float duration)
     {
         float originalFireRate = fireRate;
@@ -143,4 +205,24 @@ public class PlayerController : MonoBehaviour
         fireRate = originalFireRate; // Restore original fire rate
     }
 
+    // Method to manually activate shield (for testing or power-ups)
+    public void ActivateShield(float duration = 0f)
+    {
+        if (duration <= 0f)
+            duration = shieldDuration;
+
+        StartCoroutine(InvincibilityCoroutine());
+    }
+
+    // Debug method to check current state
+    void OnGUI()
+    {
+        if (Application.isEditor) // Only show in editor
+        {
+            GUI.Label(new Rect(10, 10, 200, 20), $"Position: {transform.position}");
+            GUI.Label(new Rect(10, 30, 200, 20), $"Health: {currentHealth}");
+            GUI.Label(new Rect(10, 50, 200, 20), $"Has Shield: {hasShield}");
+            GUI.Label(new Rect(10, 70, 200, 20), $"Invincible: {isInvincible}");
+        }
+    }
 }
