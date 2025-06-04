@@ -143,7 +143,7 @@ public class PlayerController : MonoBehaviour
         hasShield = false;
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         if (isInvincible || hasShield) return; // Prevent damage if invincible or has shield
 
